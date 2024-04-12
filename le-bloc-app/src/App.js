@@ -1,27 +1,36 @@
-import './App.css';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Login from './screen/login';
-import Register from './screen/register';
-import Home from './screen/home';
+import "./App.css";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Login from "./screen/login";
+import Register from "./screen/register";
+import Home from "./screen/home";
+import Map from "./screen/map";
+import BlocCreation from "./screen/blocCreate";
 
 const router = createBrowserRouter([
   {
     path: "/login",
-    element : <Login/>
+    element: <Login />,
   },
   {
     path: "/register",
-    element : <Register/>
+    element: <Register />,
   },
   {
     path: "/home",
-    element : <Home/>
-  
-  }
+    element: <Home />,
+  },
+  {
+    path: "/map",
+    element: <Map />,
+  },
+  {
+    path: "/blocCreation",
+    element: <BlocCreation />,
+  },
 ]);
 
 function App() {
-  return <RouterProvider router={router}/>
+  return <RouterProvider router={router} />;
 }
 
 export default App;
